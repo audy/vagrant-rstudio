@@ -18,13 +18,12 @@ sudo apt-get update
 
 sudo apt-get install -y --no-install-recommends r-base-dev r-recommended qpdf
 
-# needed to install RCurl (devtools dependency)
+## R library dependencies
 sudo apt-get install -y libcurl4-gnutls-dev
+sudo apt-get install -y libxml2-dev
 
-# create the rstudo user
-#sudo adduser rstudio
-sudo useradd --home /home/rstudio rstudio
-sudo passwd rstudio rstudio
+# install R packages
+sudo Rscript install-R-packages.R
 
 ## install r-studio
 sudo apt-get install -y gdebi-core
