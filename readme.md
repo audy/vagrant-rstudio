@@ -11,6 +11,15 @@ $ VBoxManage --version
 4.3.18r96516
 ```
 
+## Instructions
+
+```
+$ vagrant up # grab some tea
+$ vagrant ssh # configure user(s)
+```
+
+then point browser to: http://localhost:6767
+
 ## LICENSE
 
 The MIT License (MIT)
