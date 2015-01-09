@@ -18,16 +18,20 @@ sudo apt-get update
 
 sudo apt-get install --no-install-recommends r-base-dev r-recommended qpdf
 
-# needed to install RCurl (devtools dependency)
-sudo apt-get install libcurl4-gnutls-dev
+## R library dependencies
+sudo apt-get install -y libcurl4-gnutls-dev
+sudo apt-get install -y libxml2-dev
 
-# create the rstudo user
+# install R packages
+sudo Rscript install-R-packages.R
+
+# create the rstudio user
 #sudo adduser rstudio
 
 ## install r-studio
-#sudo apt-get install -y gdebi-core
-#sudo apt-get install -y libapparmor1 # Required only for Ubuntu, not Debian
-#wget http://download2.rstudio.org/rstudio-server-0.98.1091-amd64.deb
-#sudo gdebi --non-interactive rstudio-server-0.98.1091-amd64.deb
+sudo apt-get install -y gdebi-core
+sudo apt-get install -y libapparmor1 # Required only for Ubuntu, not Debian
+wget http://download2.rstudio.org/rstudio-server-0.98.1091-amd64.deb
+sudo gdebi --non-interactive rstudio-server-0.98.1091-amd64.deb
 
 # rstudio starts automatically
