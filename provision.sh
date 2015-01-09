@@ -16,18 +16,20 @@ sudo add-apt-repository "ppa:marutter/c2d4u"
 
 sudo apt-get update
 
-sudo apt-get install --no-install-recommends r-base-dev r-recommended qpdf
+sudo apt-get install -y --no-install-recommends r-base-dev r-recommended qpdf
 
 # needed to install RCurl (devtools dependency)
-sudo apt-get install libcurl4-gnutls-dev
+sudo apt-get install -y libcurl4-gnutls-dev
 
 # create the rstudo user
 #sudo adduser rstudio
+sudo useradd --home /home/rstudio rstudio
+sudo passwd rstudio rstudio
 
 ## install r-studio
-#sudo apt-get install -y gdebi-core
-#sudo apt-get install -y libapparmor1 # Required only for Ubuntu, not Debian
-#wget http://download2.rstudio.org/rstudio-server-0.98.1091-amd64.deb
-#sudo gdebi --non-interactive rstudio-server-0.98.1091-amd64.deb
+sudo apt-get install -y gdebi-core
+sudo apt-get install -y libapparmor1 # Required only for Ubuntu, not Debian
+wget http://download2.rstudio.org/rstudio-server-0.98.1091-amd64.deb
+sudo gdebi --non-interactive rstudio-server-0.98.1091-amd64.deb
 
 # rstudio starts automatically
