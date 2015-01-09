@@ -3,4 +3,7 @@ language: c
 script: sh provision.sh
 
 notifications:
-  irc: "chat.freenode.net#science-lab2021"
+  email: never
+  irc:
+    channels:
+      - "chat.freenode.net#science-lab2021"
