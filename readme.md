@@ -20,7 +20,7 @@ $ vagrant up # grab some tea
 $ vagrant ssh # configure user(s) (todo: write how-to)
 ```
 
-then point browser to: [http://localhost:8787]
+then point browser to: [http://localhost:8787](http://localhost:8787)
 
 ## LICENSE
 
