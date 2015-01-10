@@ -13,9 +13,11 @@ $ VBoxManage --version
 
 ## Instructions
 
+Edit `install-r-packages.R` to suit your needs.
+
 ```
 $ vagrant up # grab some tea
-$ vagrant ssh # configure user(s)
+$ vagrant ssh # configure user(s) (todo: write how-to)
 ```
 
 then point browser to: http://localhost:6767
